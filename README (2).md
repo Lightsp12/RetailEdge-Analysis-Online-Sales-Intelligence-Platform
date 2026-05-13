@@ -126,24 +126,6 @@ USA and UK together account for 40% of global revenue. Australia is the fastest-
 Return rates are uniform across all shipping and payment combinations (11.74%–12.22%), confirming that delivery speed and payment method are NOT the primary drivers of returns. The root cause is upstream — likely product descriptions or quality — not logistics.
 
 
-
----
-
-## Dashboard Structure
-
-All 5 pages share a **master filter panel**:
-
-| Filter | Type | Pages |
-|---|---|---|
-| Year | Dropdown | All |
-| Month | Multi-select | All |
-| Country | Multi-select checkbox | All |
-| Category | Multi-select checkbox | 1, 3, 4 |
-| Payment Method | Multi-select | 1, 5 |
-| Shipment Type | Multi-select | 1, 5 |
-| Return Status | Toggle | 3, 5 |
-| Review Stars | Range slider (1–5) | 3, 5 |
-
 ---
 
 ## Next Steps
@@ -154,35 +136,6 @@ All 5 pages share a **master filter panel**:
 - **Enrich with CAC and COGS data** to calculate true net margin per category and customer segment
 - **Add predictive churn modelling** to identify customers moving toward At Risk before they fully lapse, using ML on the RFM score history
 - **Expand geographic analysis** with external market data (GDP, e-commerce penetration rates) to build an evidence-based expansion case for India, Brazil, and Mexico
-
----
-
-
-## How to Run
-
-### 1. Generate the dataset
-```bash
-python generate_data.py
-# Outputs: sales_data.csv (120,000 rows, ~14.7MB)
-```
-
-### 2. Load into BigQuery
-```bash
-# Upload sales_data.csv to your BigQuery dataset
-# Update the table reference in each SQL file:
-# `your-project.your_dataset.sale_data_online`
-```
-
-### 3. Run the queries
-```bash
-# Run each .sql file in BigQuery console or via bq CLI:
-bq query --use_legacy_sql=false < queries/01_revenue_profitability.sql
-```
-
-### 4. Connect to dashboard
-- Export each query result as a BigQuery table or CSV
-- Connect to Power BI via BigQuery connector or import CSVs directly
-- Apply the master filter panel across all 5 pages
 
 ---
 
