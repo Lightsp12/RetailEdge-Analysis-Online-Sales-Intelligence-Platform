@@ -140,3 +140,7 @@ Return rates are uniform across all shipping and payment combinations (11.74%–
 ---
 
 
+<img width="1903" height="687" alt="image" src="https://github.com/user-attachments/assets/cfe293b0-570f-4fe4-86df-b92e61287b2c" />
+
+
+
