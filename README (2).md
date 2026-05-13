@@ -1,11 +1,5 @@
 # RetailEdge Analytics: Online Sales Intelligence Platform
 
-![SQL](https://img.shields.io/badge/SQL-BigQuery%20GoogleSQL-4285F4?style=flat&logo=google-cloud&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=flat&logo=powerbi&logoColor=black)
-![Tableau](https://img.shields.io/badge/Tableau-Dashboard-E97627?style=flat&logo=tableau&logoColor=white)
-![Dataset](https://img.shields.io/badge/Dataset-120%2C000%20rows-brightgreen?style=flat)
-![Status](https://img.shields.io/badge/Status-Complete-success?style=flat)
 
 ---
 
@@ -61,7 +55,7 @@ Without structured SQL analysis, these questions remained unanswered across 120,
 - **BigQuery (GoogleSQL):** Wrote 5 production-grade SQL queries using CTEs, window functions (`LAG`, `NTILE`, `SUM OVER`), `COUNTIF`, `DATE_DIFF`, `NULLIF` safe division, and `CAST AS NUMERIC` for financial precision
 - **RFM Modelling:** Built a three-layer CTE chain to score all customers on Recency, Frequency, and Monetary value using `NTILE(5)` scoring windows, then applied `CASE WHEN` segmentation logic to classify 9 customer segments
 - **Multi-Dimensional Segmentation:** Analysed performance across countries, categories, products, shipment types, and payment methods to identify root causes rather than surface symptoms
-- **Dashboard Design:** Defined a 5-page filter-driven dashboard structure with a master filter panel applicable across all pages
+- **Dashboard Design:** Defined a filter-driven dashboard structure with a master filter panel applicable across all pages
 
 ---
 
@@ -81,7 +75,7 @@ Without structured SQL analysis, these questions remained unanswered across 120,
 
 ## Results & Business Recommendations
 
-### Page 1 — Revenue & Profitability
+###  Revenue & Profitability
 
 | Metric | Value |
 |---|---|
@@ -95,7 +89,7 @@ Without structured SQL analysis, these questions remained unanswered across 120,
 
 Profit margin held at 27.48% with less than 0.4% variance across all 36 months, confirming pricing discipline. The 2023 stagnation (-0.01% avg YoY growth) reversed in 2024 (+1.31%), suggesting early recovery. Without intervention, the seasonal mid-year peak and Q4 drop will repeat.
 
-### Page 2 — Customer Intelligence (RFM)
+###  Customer Intelligence (RFM)
 
 | Segment | Customers | Revenue | Action |
 |---|---|---|---|
@@ -108,7 +102,7 @@ Profit margin held at 27.48% with less than 0.4% variance across all 36 months, 
 
 50.3% of all customers are Potential Loyalists. Converting 10% to Loyal Customers would represent a meaningful uplift in lifetime value. The Lost segment ($21.6M historical revenue) is the highest-priority win-back audience.
 
-### Page 3 — Product & Category Performance
+###  Product & Category Performance
 
 | Category | Revenue | Margin | Return Rate | Note |
 |---|---|---|---|---|
@@ -120,7 +114,7 @@ Profit margin held at 27.48% with less than 0.4% variance across all 36 months, 
 
 Electronics drives 39.9% of revenue but creates volume dependency. Automotive has the highest margin (27.7%) with significant headroom to grow. Toys carries the highest return rate and warrants product quality review. Books and Food (combined 4% of revenue) should be evaluated for strategic repositioning.
 
-### Page 4 — Geographic Sales Intelligence
+###  Geographic Sales Intelligence
 
 | Country | Revenue | 2024 YoY Growth |
 |---|---|---|
@@ -134,7 +128,7 @@ Electronics drives 39.9% of revenue but creates volume dependency. Automotive ha
 
 USA and UK together account for 40% of global revenue. Australia is the fastest-growing market (+6.74% in 2024). India represents a large, underpenetrated opportunity relative to population size.
 
-### Page 5 — Operational Efficiency
+###  Operational Efficiency
 
 | Shipment Type | Return Rate | Avg Satisfaction |
 |---|---|---|
@@ -146,17 +140,6 @@ Return rates are uniform across all shipping and payment combinations (11.74%–
 
 ---
 
-## SQL Queries
-
-All 5 queries are available in the [`/queries`](/queries) folder:
-
-| File | Business Problem |
-|---|---|
-| `01_revenue_profitability.sql` | Monthly revenue, profit, margin %, avg order value |
-| `02_customer_rfm.sql` | RFM segmentation — Champions, Loyal, At Risk, Lost |
-| `03_product_performance.sql` | Category and product revenue, margin, returns, revenue share % |
-| `04_geographic_intelligence.sql` | Country YoY growth, unique customers, revenue per customer |
-| `05_operational_efficiency.sql` | Shipment × payment matrix, return rates, satisfaction scores |
 
 ### Key SQL Techniques Used
 
