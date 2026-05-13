@@ -210,32 +210,6 @@ All 5 pages share a **master filter panel**:
 
 ---
 
-## Repository Structure
-
-```
-retailedge-analytics/
-│
-├── README.md
-├── queries/
-│   ├── 01_revenue_profitability.sql
-│   ├── 02_customer_rfm.sql
-│   ├── 03_product_performance.sql
-│   ├── 04_geographic_intelligence.sql
-│   └── 05_operational_efficiency.sql
-├── data/
-│   └── sales_data.csv                  # 120,000 row dataset
-├── output/
-│   ├── Business_Problem_1.csv
-│   ├── Business_Problem_2.csv
-│   ├── Business_Problem_3.csv
-│   ├── Business_Problem_4.csv
-│   └── Business_Problem_5.csv
-├── docs/
-│   └── RetailEdge_Portfolio.docx       # Full case study document
-└── generate_data.py                    # Python script to regenerate dataset
-```
-
----
 
 ## How to Run
 
