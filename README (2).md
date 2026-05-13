@@ -125,30 +125,7 @@ USA and UK together account for 40% of global revenue. Australia is the fastest-
 
 Return rates are uniform across all shipping and payment combinations (11.74%–12.22%), confirming that delivery speed and payment method are NOT the primary drivers of returns. The root cause is upstream — likely product descriptions or quality — not logistics.
 
----
 
-
-### Key SQL Techniques Used
-
-```sql
--- RFM scoring with NTILE window functions
-NTILE(5) OVER (ORDER BY recency_days ASC)  AS r_score,
-NTILE(5) OVER (ORDER BY frequency DESC)    AS f_score,
-NTILE(5) OVER (ORDER BY monetary DESC)     AS m_score
-
--- Safe financial division (BigQuery)
-ROUND(
-    CAST(SUM(profit) AS NUMERIC) /
-    NULLIF(CAST(SUM(revenue) AS NUMERIC), 0) * 100
-, 2) AS profit_margin_pct
-
--- YoY growth with LAG window function
-LAG(revenue) OVER (PARTITION BY country ORDER BY year) AS prev_year_revenue
-
--- Revenue share across all products
-CAST(SUM(revenue) AS NUMERIC) /
-NULLIF(SUM(SUM(revenue)) OVER (), 0) * 100 AS revenue_share_pct
-```
 
 ---
 
@@ -209,4 +186,4 @@ bq query --use_legacy_sql=false < queries/01_revenue_profitability.sql
 
 ---
 
-*Portfolio project — fictional dataset generated for analytical demonstration purposes.*
+
