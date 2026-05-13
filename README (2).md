@@ -33,19 +33,6 @@ Without structured SQL analysis, these questions remained unanswered across 120,
 
 **Stakeholders:** CEO · Head of Sales · Marketing Director · Operations Manager · Regional Market Leads
 
----
-
-## Dataset
-
-| Attribute | Detail |
-|---|---|
-| Total Records | 120,000 orders |
-| Time Period | January 2022 – December 2024 |
-| Countries | 10 (USA, UK, Canada, Germany, France, India, Australia, Japan, Brazil, Mexico) |
-| Product Categories | 10 (Electronics, Sports, Home, Clothing, Garden, Automotive, Beauty, Toys, Food, Books) |
-| Key Fields | `order_id`, `date`, `customer_id`, `customer_name`, `country`, `category`, `product`, `quantity`, `unit_price`, `revenue`, `profit`, `payment_method`, `shipment_type`, `review_stars`, `return_status` |
-| Database | Google BigQuery (GoogleSQL) |
-| Generated With | Python (synthetic dataset with built-in seasonality) |
 
 ---
 
