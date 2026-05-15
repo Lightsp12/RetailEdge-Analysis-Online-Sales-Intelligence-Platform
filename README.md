@@ -31,7 +31,7 @@ RetailEdge's leadership team needed answers to five critical business questions:
 
 Without structured SQL analysis, these questions remained unanswered across 120,000 rows of raw transactional data spanning three years and ten countries.
 
-**Stakeholders:** CEO · Head of Sales · Marketing Director · Operations Manager · Regional Market Leads
+**Stakeholders:** Head of Sales · Marketing Director · Operations Manager · Regional Market Leads
 
 
 ---
